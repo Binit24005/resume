@@ -24,7 +24,10 @@ const app = express();
 
 // CORS — allow requests from frontend
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: [
+  'http://localhost:3000',
+  'https://resume-bvnzaa7vx-binit-s-projects1.vercel.app'
+],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
