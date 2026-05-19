@@ -2,10 +2,10 @@
 // Axios instance with JWT auth interceptor
 
 import axios from 'axios';
-import toast from 'react-hot-toast';
+
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
+  baseURL: process.env.REACT_APP_API_URL || 'https://resume-builder-backend-snp2.onrender.com/api',
   timeout: 15000,
   headers: { 'Content-Type': 'application/json' },
 });
@@ -24,7 +24,7 @@ API.interceptors.request.use(
 API.interceptors.response.use(
   (response) => response,
   (error) => {
-    const message = error.response?.data?.message || 'Something went wrong';
+  
 
     if (error.response?.status === 401) {
       // Token expired or invalid — log out

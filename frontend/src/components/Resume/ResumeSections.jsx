@@ -8,7 +8,7 @@ import InputField  from '../Shared/InputField';
 
 // ─── Validation helpers ───────────────────────────────────────────────────────
 const isValidEmail = (v) => !v || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-const isValidPhone = (v) => !v || /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(v.replace(/\s/g, ''));
+const isValidPhone = (v) => !v || /^[+]?[()]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/.test(v.replace(/\s/g, ''));
 
 // ─── Delete button ────────────────────────────────────────────────────────────
 const DeleteBtn = ({ onClick }) => (

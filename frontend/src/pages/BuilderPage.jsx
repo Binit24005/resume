@@ -15,7 +15,6 @@ import {
   ProjectsSection,
   CertificationsSection,
 } from '../components/Resume/ResumeSections';
-import InputField from '../components/Shared/InputField';
 import { exportToPDF } from '../utils/pdfExport';
 
 const BuilderPage = () => {

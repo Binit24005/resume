@@ -5,7 +5,7 @@ import { useResume } from '../../context/ResumeContext';
 import { exportToPDF } from '../../utils/pdfExport';
 
 const Header = ({ onMenuClick, title = 'Resume Builder' }) => {
-  const { saving, saveResume, currentId, resumeData } = useResume();
+  const { saving, saveResume, resumeData } = useResume();
 
   return (
     <header style={{
